@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container light-text">
+  <h1 class="text-center">Extract Text from an Image</h1>
+  <form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.image.label(class="form-control-label") }}
+      {{ form.image(class="form-control-file") }}
+    </div>
+    <div>
+      {{ form.submit(class="btn btn-primary") }}
+    </div>
+  </form>
+  {% if secret %}
+    <div class="mt-4">
+      <h2>Extracted Text</h2>
+      <p style="background-color: white; color: black; font-family: monospace"><b>{{ secret }}</b></p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container light-text">
+  <h1 class="text-center">Inject Text into an Image</h1>
+  <form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.image.label(class="form-control-label") }}
+      {{ form.image(class="form-control-file") }}
+    </div>
+    <div class="form-group">
+      {{ form.text.label(class="form-control-label") }}
+      {{ form.text(class="form-control") }}
+    </div>
+    <div>
+      {{ form.submit(class="btn btn-primary") }}
+    </div>
+  </form>
+</div>
+{% endblock %}
+

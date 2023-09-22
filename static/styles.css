@@ -1,0 +1,10 @@
+body {
+  background-image: url("background_image/image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.light-text {
+  color: #77d864; /* sets the text color to white */
+}
